@@ -1,0 +1,4 @@
+#!/bin/sh
+# Bloom launcher. The system Python already has everything needed (GTK, layer shell, cairo).
+here=$(dirname "$(readlink -f "$0")")
+PYTHONPATH="$here${PYTHONPATH:+:$PYTHONPATH}" exec /usr/bin/python3 -m wallbloom "$@"
